@@ -24,18 +24,18 @@ app.use(express.static(publicDirectoryPath))
 app.get('', (req, res) => {
     res.render('index', {
         title: 'Weather',
-        name: 'Akhlak Ahmad'
+        name: 'Ruvi Siddique'
     })
 })
 app.get('/about', (req, res) => {
-    res.render('about', {title:'About Me', name: 'Akhlak Ahmad'})
+    res.render('about', {title:'About Me', name: 'Ruvi Siddique'})
 })
 
 app.get('/help', (req, res) => {
     res.render('help', {
         helpText: 'This is some helpful text',
         title: 'Help',
-        name: 'Akhlak Ahmad'
+        name: 'Ruvi Siddique'
     })
 })
 
@@ -87,7 +87,7 @@ app.get('/product', (req, res) => {
 app.get('/help/*', (req, res) => {
     res.render('404', {
         title:'404',
-        name: 'Akhlak Ahmad',
+        name: 'Ruvi Siddique',
         errorMessage: 'Help Article not found.'
     })
 })
@@ -95,7 +95,7 @@ app.get('/help/*', (req, res) => {
 app.get('*', (req, res) => {
     res.render('404', {
         title:'404',
-        name: 'Akhlak Ahmad',
+        name: 'Ruvi Siddique',
         errorMessage: 'Page not found.'
     })
 })
