@@ -6,8 +6,8 @@ const forecast = (latitude, longitude, callback) => {
             callback('Unable to connect to weather services', undefined)
         } else if(response.body.error) {
             callback('Unable to find location. Try another search', undefined)
-        } else {
-            callback(undefined, response.body.daily.data[0].summary + ' It is currently ' + response.body.currently.temperature + ' degrees out. There is a ' + response.body.currently.precipProbability + '% chance of rain.')
+        } else {            
+            callback(undefined, response.body.daily.data[0].summary + ' It is currently ' + response.body.currently.temperature + ' degrees out. High temperature is: '+ response.body.daily.data[0].temperatureHigh+' with low is: '+response.body.daily.data[0].temperatureLow +' There is a ' + response.body.currently.precipProbability + '% chance of rain.')
         }
 
     })
